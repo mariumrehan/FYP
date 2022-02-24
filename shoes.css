@@ -246,6 +246,31 @@ section{
 	font-size: 1.7rem;
 	color: orangered;
 }
+.flats .box-container .box .content .boxed{
+	border: 5px solid green;
+
+	background-color: green;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	width: 150px;
+	background: solid green;
+
+
+
+}
+.flats .box-container .box .content .box-score{
+	border: 5px solid #FFD700;
+	background-color: #FFD700;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	width: 150px;
+	background: solid green;
+	
+
+
+}
 @media (max-width: 1300px){
 	#menu-bar{
 		display: none;
