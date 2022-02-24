@@ -1,0 +1,285 @@
+*{
+	font-family: 'Open-sans',sans-serif;	
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: none;
+	transition: all .2s linear;
+	background-color: #F5F5F5;
+}
+html{
+	font-size: 60%;
+	overflow: auto;
+	scroll-padding-top:6rem;
+	scroll-behavior: smooth;
+}
+header{
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background:#fff;
+	padding: 2rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #F5F5F5;
+}
+
+	
+
+
+header .logo{
+	font-size: 2rem;
+	color: #000;
+	font-weight: 500;
+
+}
+
+header .navbar{
+	
+	font-size: 1.5rem;
+	color: #000;
+	margin: 0 1rem;
+	margin-right: 60px;
+	letter-spacing: 5px;
+	word-spacing: 50px;
+
+
+
+}
+
+header .navbar a:hover{
+	color: orangered;
+}
+
+#menu-bar {
+	font-size: 2rem;
+	padding: .5rem 1rem;
+	border:.1rem solid #000;
+	color: #000;
+	border-radius: .3rem;
+	cursor:pointer;
+	display: none;
+	
+
+}
+
+section{
+	padding: 2rem 9%;
+
+
+
+}
+.home{
+	padding: 0;
+	position: relative;
+
+}
+
+.home .slide-container .slide{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	padding: 0 9%;
+	padding-top: 9rem;
+}
+.home .slide-container .slide .content{
+	flex: 1 1 40rem;
+	animation: slideContent .5s linear 1s backwards;
+
+}
+@keyframes slideContent{
+	0%{
+		opacity: 0;
+		transform: translateX(-10rem);
+	}
+}
+.home .slide-container .slide .image{
+	flex: 1 1 50rem;
+	padding-bottom: 15rem;
+	position: relative;
+	z-index: 0;
+}
+.home .slide-container .slide .image .shoe{
+	width: 100%;
+	transform: rotate(-5deg);
+	animation: shoe .3s linear;
+}
+@keyframes shoe{
+	0%{
+		transform: rotate(0deg) scale(.5);
+	}
+
+}
+.home .slide-container .slide .content span{
+	font-size: 3rem;
+	color: #000;
+	text-transform: uppercase;
+
+}
+
+.home .slide-container .slide .content .h3{
+	font-size: 4rem;
+	color: #000;
+
+}
+
+.home .slide-container .slide .content p{
+	font-size: 2rem;
+	color: #666;
+	padding: .5rem 0;
+
+}
+
+.home .slide-container{
+	display: none;
+}
+
+
+.home .slide-container.active{
+	display: block;
+}
+
+.home #prev, .home #next{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+	height: 5rem;
+	width: 5rem;
+	line-height: 5.5rem;
+	font-size: 2rem;
+	color: #000;
+	border: 2rem solid #000;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+
+}
+.home #prev, .home #next:hover{
+	color: #fff;
+
+}
+
+.home #prev{
+	left:3rem;
+}
+
+.home #next{
+	right: 3rem;
+
+}
+
+.heading{
+	text-align: center;
+	font-size: 3rem;
+	padding: 10px;
+	font-weight: bolder;
+	word-spacing: 10px;
+	letter-spacing: 5px;
+}
+
+.flats .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+
+.flats.box-container .box{
+	border: .1rem solid rgba (0,0,0,.1);
+	border-radius: .5rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	background: #f9f9f9;
+	flex: 1 1 30rem;
+}
+
+.flats .box-container .content{
+	padding: 1.5rem;
+
+}
+.flats.box-container .box img{
+	height: 10rem;
+	transform: rotate(-35deg);
+	filter: drop-shadow(0 .5rem 1rem rgba(0,0,0,.1));
+	margin: 8rem 2rem;
+}
+
+.flats .box-container .box:hover img{
+	transform: rotate(-35deg) scale(1.2);
+}
+
+.flats .box-container .box .content h3{
+	color: #000;
+	font-size:2.5rem;
+}
+.flats .box-container .box .content .price{
+	color: #000;
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding: 1rem 0;
+}
+.flats .box-container .box .content .description{
+	color: #000;
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 1rem 0;
+}
+.flats .box-cntainer .box .content .details{
+	font-size: 3rem;
+	color: #666;
+	
+}
+.flats .box-container .box .content .stars{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.flats .box-container .box .content .stars i{
+	font-size: 1.7rem;
+	color: orangered;
+}
+@media (max-width: 1300px){
+	#menu-bar{
+		display: none;
+	}
+}
+@media (max-width: 768px){
+	#menu-bar{
+		display: block;
+		background:  #F5F5F5;
+	}
+
+	header .navbar{
+		position: absolute;
+		top:100%;
+		left: -120%;
+		width: 100%;
+		background:#eee;
+		border-top: .1rem solid rgba(0,0,0,.1); 
+	}
+
+	header .navbar a{
+		font-size: 2rem;
+		background: #fff;
+		border: .1rem solid #000;
+		border-radius: .5rem;
+		padding: 1rem;
+		margin: 1rem;
+		display: block;
+		text-align: center;
+	}
+
+	header .navbar.active{
+		left:0;
+	}
+}
+
+
