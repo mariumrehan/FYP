@@ -271,6 +271,28 @@ section{
 
 
 }
+.flats .box-container .box .content .box_fake{
+	border: 5px solid red;
+
+	background-color: red;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	width: 150px;
+	background: solid red;
+
+}
+
+.flats .box-container .box .content .box-sscore{
+	border: 5px solid #FFD700;
+	background-color: #FFD700;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	width: 150px;
+	background: solid #FFD700;
+	
+}
 @media (max-width: 1300px){
 	#menu-bar{
 		display: none;
